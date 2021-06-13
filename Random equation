@@ -1,0 +1,265 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void rating(int score,int counter);
+int main ()
+{
+  srand (time (NULL));
+  int ans;
+  int a,b;
+  int c, d;
+  int score = 0;
+  int counter = 0;
+  char ch;
+  
+  puts ("press 'm' for minigame or 'f' for full game\n");
+  scanf ("%c", &ch);
+
+  switch (ch)
+    {
+//questions
+
+    case 'M':
+    case 'm':
+      {
+	printf ("\nwhat is %5d\n\t%5d  +\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	c = a + b;
+	counter = counter + 1;
+	if (ans == c)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", c);
+	  }
+//1 +
+
+	printf ("\nwhat is %5d\n\t%5d  -\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	d = a - b;
+	counter = counter + 1;
+	if (ans == d)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", d);
+	  }
+//2 -
+
+	printf ("\nwhat is %5d\n\t%5d  +\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	c = a + b;
+	counter = counter + 1;
+	if (ans == c)
+	  {
+	    c = a + b;
+	    score = score + 1;
+
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", c);
+	  }		
+// 3 +  	  
+      }				//end case'm'
+      break;
+//end minigame
+
+
+    case '\n':
+    case '\t':
+    case ' ':
+      break;
+
+    case 'f':
+    case 'F':
+      {
+	printf ("\nwhat is %5d\n\t%5d  +\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	c = a + b;
+	counter = counter + 1;
+	if (ans == c)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", c);
+	  }
+//1 +
+
+	printf ("\nwhat is %5d\n\t%5d  -\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	d = a - b;
+	counter = counter + 1;
+	if (ans == d)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", d);
+	  }
+//2 -
+
+	printf ("\nwhat is %5d\n\t%5d  +\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	c = a + b;
+	counter = counter + 1;
+	if (ans == c)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", c);
+	  }
+//3 +
+	printf ("\nwhat is %5d\n\t%5d  -\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	d = a - b;
+	counter = counter + 1;
+	if (ans == d)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", d);
+	  }
+//4 -
+
+	printf ("\nwhat is %5d\n\t%5d  +\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	c = a + b;
+	counter = counter + 1;
+	if (ans == c)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", c);
+	  }
+//5 +
+
+	printf ("\nwhat is %5d\n\t%5d  -\n          ---\t\n", a =
+		1 + (rand () % 250), b = 1 + (rand () % 250));
+	scanf ("%d", &ans);
+	d = a - b;
+	counter = counter + 1;
+	if (ans == d)
+	  {
+	    printf ("\ngood!");
+	    score = score + 1;
+	  }
+	else
+	  {
+	    printf ("\nwrong");
+	    printf ("\tit's %d\n", d);
+	  }
+//6 -
+      }				//end case'f'
+      break;
+
+    }				//end switch//end queostions.
+
+rating(score, counter);//rating
+
+
+}				//end main
+
+void rating(int score,int counter){
+//full game rating
+  if (counter == 6)
+    {
+
+      if (score == counter)
+	{
+	  printf ("\nbravo! full mark\n %d out of %d", score, counter);
+	}
+
+      if (score == 5 || score == 4)
+	{
+	  printf ("\nNice marks!\n %d out of %d", score, counter);
+	}
+
+      if (score == 3)
+	{
+	  printf ("\nneeded more practice\n %d out of %d", score, counter);
+	}
+
+      if (score == 1 || score == 2)
+	{
+	  printf ("\nthat's bad 0o0\n %d out of %d", score, counter);
+	}
+      if (score == 1)
+	{
+	  printf ("\nbut at least you'v solved one :p\n ");
+	}
+
+      if (score == 0)
+	{
+	  printf ("\nHave you ever got to a school once :/\n %d out of %d",
+		  score, counter);
+	}
+    }				//end full game rating
+
+
+//minigame rating
+  if (counter == 3)
+    {
+
+      if (score == counter)
+	{
+	  printf ("\nbravo! full mark :D\n %d out of %d", score, counter);
+	}
+
+      if (score == 2)
+	{
+	  printf ("\nnot bad ;)\n %d out of %d", score, counter);
+	}
+
+      if (score == 1)
+	{
+	  printf ("\nneeded more practice :p\n %d out of %d", score, counter);
+	}
+
+      if (score == 0)
+	{
+	  printf ("\n needed a ton of practice-_- \n %d out of %d", score,
+		  counter);
+	}
+    }				//end minigame rating
+//end rating
+}
+
